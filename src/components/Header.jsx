@@ -25,7 +25,7 @@ const Header = () => {
     <Navbar bg="dark" variant="dark" style={{ height: 80 }}>
       <Container>
       <Navbar.Brand>
-          <Link to="/home">Home page</Link>
+          <Link to="/">Home page</Link>
         </Navbar.Brand>
         <Navbar.Brand>
           <Link to="/cart">Shopping Cart</Link>
