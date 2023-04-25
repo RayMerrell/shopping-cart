@@ -4,6 +4,7 @@ import { Button, Col, Form, Image, ListGroup, Row } from "react-bootstrap";
 import "../css/ShoppingCart.css";
 import Rating from "./Rating";
 import { AiFillDelete } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
   const {
@@ -80,11 +81,13 @@ const Cart = () => {
         </ListGroup>
       </div>
       <div className="filters summary">
-        <span className="title">Subtotal for ({cart.length}) items</span>
+        <span className="title">Subtotal for {cart.length} item{cart.length>1?"s":""}</span>
         <span style={{ fontWeight: 700, fontSize: 20 }}>Total: £{total}</span>
-        <Button type="button" disabled={cart.length === 0}>
-          Proceed to checkout
-        </Button>
+        <Link to="/Checkout">
+          <Button type="button" disabled={cart.length === 0}>
+            Proceed to checkout
+          </Button>
+        </Link>
       </div>
     </div>
   );
