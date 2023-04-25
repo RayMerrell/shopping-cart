@@ -12,7 +12,7 @@ function App() {
       <Header />
       <div>
         <Routes>          
-          <Route path="/home" element={<Home />} exact />
+          <Route path="/" element={<Home />} exact />
           <Route path="/cart" element={<Cart />} exact />
           <Route path="/checkout" element={<Checkout />} exact />
         </Routes>
